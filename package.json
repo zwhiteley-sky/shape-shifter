@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A library for working with shapes",
   "scripts": {
-    "test": "jest --coverage=true",
+    "test": "jest",
     "test:easy": "jest ./test/easy.test.js",
     "test:medium": "jest ./test/medium.test.js",
     "test:hard": "jest ./test/hard.test.js"

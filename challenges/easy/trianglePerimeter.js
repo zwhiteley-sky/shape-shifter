@@ -5,6 +5,7 @@
  * @param {number} c - the last side
  * @returns {number} the perimeter
  */
+
 function trianglePerimeter (a, b, c) {
   return a + b + C
 }
