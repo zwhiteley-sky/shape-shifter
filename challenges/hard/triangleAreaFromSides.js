@@ -10,9 +10,14 @@ const trianglePerimeter = require('../easy/trianglePerimeter')
 */
 
 function triangleAreaFromSides (a, b, c) {
-  const s = trianglePerimeter(a, b, c) / 2
-  // I'm going to lunch, I'll do the rest later... probably
-  return
+  let s = (a + b + c) / 2;
+  let area_squared = s * (s - a) * (s - b) * (s - c);
+  return Math.sqrt(area_squared);
+
+  // Works, just with rounding error
+  //let angle_cos = (b * b + c * c - a * a) / (2 * b * c);
+  //let angle_sin = Math.sqrt(1 - angle_cos * angle_cos);
+  //return (b * c * angle_sin) / 2;
 }
 
 module.exports = triangleAreaFromSides

@@ -7,8 +7,16 @@
  */
 
 function triangleAreaFromCoords (points) {
-  [A, B, C] = points
-  return 0.5 * ((A.x * B.x + B.x * C.x + C.x * A.x) - (A.y * B.y + B.y * C.y + C.y * A.y))
+  let area = 0;
+
+  for (let i = 0; i < points.length; ++i) {
+    let current = points[i];
+    let next = points[(i + 1) % points.length];
+
+    area += (current.y + next.y) * (current.x - next.x);
+  }
+
+  return area / 2;
 }
 
 module.exports = triangleAreaFromCoords
