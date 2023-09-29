@@ -9,8 +9,8 @@
 function rectangleAreaFromCoords (points) {
   [A,B,C,D] = points;
 
-  let xdiff = A.x - points.filter(x => A.x != x.x)[0].x;
-  let ydiff = A.y - points.filter(x => A.y != x.y)[0].y;
+  let xdiff = A.x - points.find(x => A.x != x.x).x;
+  let ydiff = A.y - points.find(x => A.y != x.y).y;
 
   return Math.abs(xdiff * ydiff);
 }
